@@ -17,7 +17,7 @@ text_color_theme: default #eg: default | dark | forest | ocean | chocolate | ora
 baseurl: /
 title: m0tao0's blog
 description: > #this means to ignore newlines until "nav_lists:"
-  This is a blog heading future...
+  This is a blog heading future......
 
 nav_lists:
   - titles:
