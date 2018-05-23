@@ -8,7 +8,3 @@ tags:
 
 # To have a preview
 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbODk5NzIyNTkyXX0=
--->
