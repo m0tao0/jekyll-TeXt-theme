@@ -75,5 +75,5 @@ Two ways of expressing nominal attributes:
 ## Comparing the performance of two classifiers
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNzE1NjkzNSwtNzc1MzYyMTMyXX0=
+eyJoaXN0b3J5IjpbMTMyNzE1NjkzNV19
 -->
