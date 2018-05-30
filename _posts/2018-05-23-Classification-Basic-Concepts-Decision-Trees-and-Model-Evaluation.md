@@ -25,8 +25,10 @@ There are two key issues to address for a learning algorithm for inducing decisi
 The test condition for a binary attribute generates two potential outcomes.
 #### Nominal attributes
 Two ways of expressing nominal attributes:
+
 1. For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., {Single} | {Married} | {Divorced}.
 2. Some decision tree algorithms, such as CART, produce only binary splits by considering all $2^{k-1} - 1$ ways of creating a binary partition of k attribute values. E.g., {Married} | {Single, Divorced}.
+
 #### Ordinal attributes
 Ordinal attributes can also produce binary or multiway splits. Ordinal attribute values can be grouped as long as the grouping does not violate the order property of the attribute values. E.g., {Small, Medium} | {Large, Extra Large} is acceptable, while {Small, Large} | {Medium, Extra Large} not.
 #### Continuous attributes
