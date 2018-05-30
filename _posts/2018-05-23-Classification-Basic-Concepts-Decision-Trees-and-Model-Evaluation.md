@@ -1,11 +1,13 @@
-
 ---
 layout: post
 title: Classification - Basic Concepts, Decision Trees, and Model Evaluation
 tags: 
-- Data Mining
-
+  - Data Mining
+lang: en
+mathjax: true
+mathjax_autoNumber: true
 ---
+
 
 # Preliminaries
 ## What tasks classification is the most suited for
@@ -31,7 +33,7 @@ For the binary case, the decision tree algorithm must consider all possible spli
 For the multiway split, the algorithm must consider all possible ranges of continuous values. One approach is to apply discretization strategies. After discretization, a new ordinal value will be assigned to each descretized interval. Adjacent intervals can also be aggregated into wider ranges as long as the order property is preserved.
 ## Measures for selecting the best split
 ### Entropy
-Entropy(t) = $$-\sum_{i=0}^{c-1} p(i|t)log_2 p(i|t)$$
+$$Entropy(t) = -\sum_{i=0}^{c-1} p(i|t)log_2 p(i|t)$$
 
 *where c is the number of classes and $0log_2 0 = 0$ in entropy calculation.*
 ### Gini
