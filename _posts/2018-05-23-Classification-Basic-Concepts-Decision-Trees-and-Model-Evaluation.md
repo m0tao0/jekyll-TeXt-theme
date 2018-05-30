@@ -36,7 +36,6 @@ For the multiway split, the algorithm must consider all possible ranges of conti
 ## Measures for selecting the best split
 ### Entropy (at node $t$)
 Entropy(t) = $-\sum_{i=0}^{c-1} p(i|t)log_2 p(i|t)$
-
 *where c is the number of classes and $0log_2 0 = 0$ in entropy calculation.*
 ### Gini
 Gini(t) = $1 - \sum_{i=0}^{c-1}[p(i|t)]^2$
