@@ -25,15 +25,16 @@ There are two key issues to address for a learning algorithm for inducing decisi
 The test condition for a binary attribute generates two potential outcomes.
 #### Nominal attributes
 Two ways of expressing nominal attributes:
-1. For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., [{Single} | {Married} | {Divorced}].
-2. Some decision tree algorithms, such as CART, produce only binary splits by considering all $2^{k-1} - 1$ ways of creating a binary partition of k attribute values. E.g., [{Married} | {Single, Divorced}].
+1. For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., {Single} | {Married} | {Divorced}.
+2. Some decision tree algorithms, such as CART, produce only binary splits by considering all $2^{k-1} - 1$ ways of creating a binary partition of k attribute values. E.g., {Married} | {Single, Divorced}.
 #### Ordinal attributes
-Ordinal attributes can also produce binary or multiway splits. Ordinal attribute values can be grouped as long as the grouping does not violate the order property of the attribute values. E.g., [{Small, Medium} | {Large, Extra Large}] is acceptable, while [{Small, Large} | {Medium, Extra Large}] not.
+Ordinal attributes can also produce binary or multiway splits. Ordinal attribute values can be grouped as long as the grouping does not violate the order property of the attribute values. E.g., {Small, Medium} | {Large, Extra Large} is acceptable, while {Small, Large} | {Medium, Extra Large} not.
 #### Continuous attributes
 For continuous attributes, the test condition can be expressed as a comparison test ($A \lt v$) or ($A \ge v$) with binary outcomes, or a range query with outcomes of the form $v_{i} \le A \lt v_{i+1}$, for i = 1, ..., k.
 For the binary case, the decision tree algorithm must consider all possible split positions v, and it selects the one that produces the best partition.
 For the multiway split, the algorithm must consider all possible ranges of continuous values. One approach is to apply discretization strategies. After discretization, a new ordinal value will be assigned to each descretized interval. Adjacent intervals can also be aggregated into wider ranges as long as the order property is preserved.
 ### Measures for selecting the best split
+
 #### Entropy (at node $t$)
 Entropy(t) = $-\sum_{i=0}^{c-1} p(i|t)log_2 p(i|t)$
 
@@ -49,7 +50,6 @@ $\Delta =  I(parent) - \sum_{j=1}^{k}\frac {N_{(v_j)}}{N}I_{(v_j)}$
 where $I(*)$ is the impurity measure of a given node, $N$ is the total number of records at the parent node, $k$ is the number of attribute values, and $N_{(v_j)}$ is the number of records associated with the child node, $v_j$.
 
 Decision tree induction algorithms often choose a test condition that maximizes the gain $\Delta$. Since $I(parent)$ is the same for all test conditions, maximizing the gain is equivalent to **minimizing the weighted average impurity measures of the child nodes**. Finally, when entropy is used as the impurity measure, the difference in entropy is known as the information gain, $\Delta_{info}$.
-
 
 #### Gain ratio
 
