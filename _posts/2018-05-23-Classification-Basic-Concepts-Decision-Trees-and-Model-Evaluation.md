@@ -27,12 +27,12 @@ The test condition for a binary attribute generates two potential outcomes.
 #### Nominal attributes
 Two ways of expressing nominal attributes:
 
-For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., Single | Married | Divorced.
+1. For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., ((Single), (Married, Divorced)).
 
-Some decision tree algorithms, such as CART, produce only binary splits by considering all $2^{k-1} - 1$ ways of creating a binary partition of k attribute values. E.g., {Married} | {Single, Divorced}.
+Some decision tree algorithms, such as CART, produce only binary splits by considering all $2^{k-1} - 1$ ways of creating a binary partition of k attribute values. E.g., ((Married), (Single, Divorced)).
 
 #### Ordinal attributes
-Ordinal attributes can also produce binary or multiway splits. Ordinal attribute values can be grouped as long as the grouping does not violate the order property of the attribute values. E.g., {Small, Medium} | {Large, Extra Large} is acceptable, while {Small, Large} | {Medium, Extra Large} not.
+Ordinal attributes can also produce binary or multiway splits. Ordinal attribute values can be grouped as long as the grouping does not violate the order property of the attribute values. E.g., ((Small, Medium), (Large, Extra Large)) is acceptable, while ((Small, Large), (Medium, Extra Large)) not.
 #### Continuous attributes
 For continuous attributes, the test condition can be expressed as a comparison test ($A \lt v$) or ($A \ge v$) with binary outcomes, or a range query with outcomes of the form $v_{i} \le A \lt v_{i+1}$, for i = 1, ..., k.
 For the binary case, the decision tree algorithm must consider all possible split positions v, and it selects the one that produces the best partition.
