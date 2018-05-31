@@ -20,6 +20,7 @@ There are two key issues to address for a learning algorithm for inducing decisi
 1. **How should the training records be split?** Each recursive step of the tree-growing process must select an attribute test condition to divide the records into smaller subsets. To implement this step, the algorithm must provide a method for specifying the test condition for different attribute types as well as an objective measure for evaluating the goodness of each test condition.
 
 2. **How should the splitting procedure stop?** A stopping condition is needed to terminate the tree-growing process. A possible strategy is to continue expanding a node until either all the records belong to the same class or all the records have identical attribute values. Although both conditions are sufficient to stop any decision tree induction algorithm, other criteria can be imposed to allow the tree growing procedure to terminate earlier.
+
 ### Methods for expressing attribute test conditions
 #### Binary attributes
 The test condition for a binary attribute generates two potential outcomes.
