@@ -27,7 +27,7 @@ The test condition for a binary attribute generates two potential outcomes.
 #### Nominal attributes
 Two ways of expressing nominal attributes:
 
-For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., {Single} | {Married} | {Divorced}.
+For a multiway split, the number of outcomes depends on the number of distinct values for the corresponding attribute. E.g., Single | Married | Divorced.
 
 Some decision tree algorithms, such as CART, produce only binary splits by considering all $2^{k-1} - 1$ ways of creating a binary partition of k attribute values. E.g., {Married} | {Single, Divorced}.
 
