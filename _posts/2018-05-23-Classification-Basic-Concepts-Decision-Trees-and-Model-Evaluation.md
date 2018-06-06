@@ -7,8 +7,6 @@ lang: en
 mathjax: true
 mathjax_autoNumber: true
 ---
-
-
 ## Preliminaries
 ### What tasks classification is the most suited for
 Classification techniques are most suited for predicting or describing data sets with binary or nominal categories. They are less effective for ordinal categories (e.g., to classify a person as a member of high-, medium-, or low-income group) **because they do not consider the implicit order among the categories**.
