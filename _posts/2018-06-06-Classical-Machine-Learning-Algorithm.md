@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Summary of Classic Machine Learning Algorith
@@ -8,8 +7,6 @@ lang: en
 mathjax: true
 mathjax_autoNumber: true
 ---
-
-
 ## 监督学习
 ### k-近邻算法
 #### 特点
