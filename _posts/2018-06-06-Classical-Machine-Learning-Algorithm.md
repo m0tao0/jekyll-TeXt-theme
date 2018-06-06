@@ -1,13 +1,14 @@
 
 ---
 layout: post
-title: Classification - Basic Concepts, Decision Trees, and Model Evaluation
+title: Summary of Classic Machine Learning Algorith
 tags: 
-  - Data Mining
+  - Classic Machine Learning
 lang: en
 mathjax: true
 mathjax_autoNumber: true
 ---
+
 
 ## 监督学习
 ### k-近邻算法
