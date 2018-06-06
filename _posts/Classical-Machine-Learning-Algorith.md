@@ -1,10 +1,14 @@
 
 ---
 layout: post
-title: Classical-Machine-Learning-Model
+title: Classification - Basic Concepts, Decision Trees, and Model Evaluation
 tags: 
-- Machine Learning
+  - Data Mining
+lang: en
+mathjax: true
+mathjax_autoNumber: true
 ---
+
 ## 监督学习
 ### k-近邻算法
 #### 特点
