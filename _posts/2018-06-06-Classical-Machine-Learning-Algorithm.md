@@ -6,6 +6,7 @@ tags:
 lang: en
 mathjax: true
 mathjax_autoNumber: true
+chart: true
 ---
 ## 监督学习
 ### k-近邻算法
