@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Summary of Classic Machine Learning Algorith
+title: Classic Machine Learning Algorithm
 tags: 
   - Classic Machine Learning
 lang: en
