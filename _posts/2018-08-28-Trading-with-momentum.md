@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Classic Machine Learning Algorithm
+title: Trading with momentum
 tags: 
   - Quantitative Trading
 lang: en
@@ -8,8 +8,6 @@ mathjax: true
 mathjax_autoNumber: true
 chart: true
 ---
-# Trading with momentum
-
 #### **Step 1: Resample data according to sampling frequency (e.g. daily, monthly, yearly)**
 
 E.g. the raw data is provided on daily basis for each ticker (i.e. stock) and date (i.e. trading day), so to conduct analysis on monthly basis, the data should be resample to use month-end prices.
