@@ -59,11 +59,55 @@ $new\ Value=\frac {old\ Value - min} {max-min}$
 ## 逻辑回归
 
 #### 优点
-
+ - 计算代价不高，易于理解和实现；
+ - 一个在线算法，可以在新数据到来时就完成参数更新，而不需要重新读取整个数据集来进行批处理运算。
 
 #### 缺点
+ - 容易过拟合，分类精度不高。
+ 
+#### 适用数据类型
+ - 数值型和标称型数据。
+
+#### Sigmoid函数
+海维赛德阶跃函数(Heaviside step function) ,或者直接称为单位阶跃函数在跳跃点上从0瞬间跳跃到1，这个瞬间跳跃过程有时很难处理。相比之下Sigmoid函数数学上更容易处理。
+$$\sigma(z) = \frac{1}{1 + \exp{-z}}$$
+其中$z = w_0 x_0 + w_1 x_1 + w_2 x_2 + ... + w_n x_n$或者$z = w^T x$
+
+#### 选择Sigmoid函数的原因
+In section 4.2 of Pattern Recognition and Machine Learning (Springer 2006), Bishop shows that the logit arises naturally as the form of the posterior probability distribution in a Bayesian treatment of two-class classification. He then goes on to show that the same holds for discretely distributed features, as well as a subset of the family of exponential distributions. For multi-class classification the logit generalizes to the normalized exponential or softmax function.
+
+It is S-Shaped and bounded function. It is also called as squashing function, which maps the whole real axis in to finite interval.
+Usually, the predictions in the classification problem are probability values. So, we don’t want our model to predict the probability value to be below 0 or above 1. Sigmoid function helps to achieve that.
+
+It is differentiable function.
+It allows us to apply many popular optimization algorithm to find the optimum point which minimizes the cost function.
+
+It produces generative model. It model the class conditional probabilities and class priors and use those probabilities to find posterior probability. In simple terms, it model the distribution of individual classes whereas discriminative just model the boundary between the classes
+Generative model gives a rich representation of relation between features and response. So we can understand the impact of individual features on response.
 
 
+#### 随机梯度上升法
+伪代码：
+所有回归系数初始化为1
+对数据集中每个样本
+  每次迭代调整学习率
+  随机选取用于计算和更新梯度的样本
+  使用$\alpha \times gradient$更新回归系数
+返回回归系数
+
+随机梯度上升法（较梯度上升法）的优点：
+ - 周期性波动降低；
+ - 收敛更快。
+
+#### 处理被据中的缺失值
+可选处理方法：
+ - 使用可用特征的均值来填补缺失值；
+ - 使用特殊值来±真补缺失值，如-1;
+ - 忽略有缺失值的样本；
+ - 使用相似样本的均值添补缺失值；
+ - 使用另外的机器学习算法预测缺失值。
+
+在逻辑回归中，可以考虑使用0来替换缺失值，因为在更新时不会影响系数的值。
 
 # 无监督学习
 
