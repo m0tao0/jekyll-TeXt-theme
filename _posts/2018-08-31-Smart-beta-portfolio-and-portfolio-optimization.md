@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Breakout strategy
+title: Smart beta portfolio and portfolio optimization
 tags: 
   - Quantitative Trading
 lang: en
